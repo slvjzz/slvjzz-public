@@ -1,0 +1,99 @@
+
+body {background-color: #685775;}
+.slider {
+  position: relative;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image {
+  margin: 1em auto;
+  border-radius: 10px;
+  max-width: 500px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #ffc107;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #ffc107;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+.contacts-table{
+  margin: auto;
+  text-align: center;
+}
+
+.animate__animated{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  max-height: fit-content;
+  min-width: 30%;
+  min-height: 30%;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Убираем скроллбар в браузере Chrome и Firefox */
+  -ms-overflow-style: none; /* Убираем скроллбар в браузере Edge */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Убираем скроллбар в браузере Safari и Chrome */
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  scroll-snap-align: start;
+  margin-right: 20px;
+  margin-left: 50px; /* Добавлено */
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.carousel-controls .arrow-icon {
+  color: #ffc107;
+  font-size: 30px;
+  cursor: pointer;
+}
